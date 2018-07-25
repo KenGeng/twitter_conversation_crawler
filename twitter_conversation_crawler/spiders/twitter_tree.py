@@ -7,9 +7,9 @@ from scrapy.selector import Selector
 from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
-import re
-import sys
-import pandas as pd
+# import re
+# import sys
+# import pandas as pd
 
 
 class TwitterTree(scrapy.Spider):
