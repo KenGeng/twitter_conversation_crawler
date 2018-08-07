@@ -16,5 +16,6 @@ class TwitterConversationSpyItem(scrapy.Item):
     content = scrapy.Field()
     replyto = scrapy.Field()
     permalink = scrapy.Field()
+    time = scrapy.Field()
 
     pass
