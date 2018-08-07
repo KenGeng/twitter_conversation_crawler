@@ -38,9 +38,9 @@ Solution:export LC_ALL="en_US.UTF-8" export LC_CTYPE="en_US.UTF-8"
 ````
 5. python run.py
 
-6. tip for connecting a server: \
+6. tip for connecting a server: 
 connect：ssh -p 22  Server@xxx.xxx.xxx.xxx 
-copy from server：scp -P 22 -r Server@xxx.xxx.xxx.xxx:~/twitter_conversation_crawler/tweetresult ~/result \
-copy to server: scp -P 22 -r ~/project_dir  Server@xxx.xxx.xxx.xxx:~/twitter_conversation_crawler/tweetresult \
-background running：nohup python run.py > my_output.log & \
+copy from server：scp -P 22 -r Server@xxx.xxx.xxx.xxx:~/twitter_conversation_crawler/tweetresult ~/result 
+copy to server: scp -P 22 -r ~/project_dir  Server@xxx.xxx.xxx.xxx:~/twitter_conversation_crawler/tweetresult 
+background running：nohup python run.py > my_output.log & 
 check running state: tail -f my_output.log
