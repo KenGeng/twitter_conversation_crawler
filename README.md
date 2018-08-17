@@ -22,7 +22,7 @@ Firefox python 3.6 and following packages:
 # Run code on a server
 1. get a server from AWS/AZURE/Vultr...
 2. install virtualenv:
-```python
+```shell
 sudo apt-get install python-pip python-dev python-virtualenv # for Python 2.7
 virtualenv --system-site-packages -p python3 targetDirectory # set python3 interpreter for virtualenv
 source ~/targetDirectory/bin/activate # bash, sh, ksh, or zsh
@@ -32,7 +32,9 @@ source ~/targetDirectory/bin/activate # bash, sh, ksh, or zsh
 ```
 sudo apt-get install firefox xvfb
 Xvfb :10 -ac &
-export DISPLAY=:10 # or：sudo -H vi /etc/environment  add DISPLAY=:10  then source /etc/environment or restart terminal
+export DISPLAY=:10 # this just changes contemporary shell
+#if you want to change it in system, do this: 
+sudo -H vi /etc/environment  add DISPLAY=:10  then source /etc/environment or restart terminal
 ```
 run `firefox` to test if it works well.
 
