@@ -7,9 +7,7 @@ from scrapy.selector import Selector
 from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
-# import re
-# import sys
-# import pandas as pd
+
 from selenium.common.exceptions import WebDriverException
 
 class TwitterTree(scrapy.Spider):
@@ -24,24 +22,22 @@ class TwitterTree(scrapy.Spider):
 
     def parse(self, response):
         try:
-            # if response.status == 404:
-            #     print("fuck")
 
             self.driver = webdriver.Firefox(
                     # executable_path='/usr/local/bin/geckodriver')
-                    executable_path='/Users/apple/fakenews/twitter_conversation_crawler/ff_geckodriveer_mac/geckodriver')
+                    executable_path='/Users/apple/fakenews/twitter_conversation_crawler/ff_geckodriver_mac/geckodriver')
             # executable_path = '/usr/local/bin/geckodriver'
             self.driver.get(response.url)
 
 
             page = self.driver.find_element_by_tag_name('body')
 
+            # you can modify following number to make selenium get more tweets from the page
             for i in range(50):
                 page.send_keys(Keys.PAGE_DOWN)
                 # simulate human operation
                 time.sleep(0.4)
 
-            print("well")
             # time.sleep(2)
 
             # for conversation in response.css(CONVERSATION_SELECTOR).extract_first()
